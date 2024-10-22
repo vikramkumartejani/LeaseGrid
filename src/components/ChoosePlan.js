@@ -8,7 +8,7 @@ const ChoosePlan = () => {
   const tiers = t("choosePlan.tiers", { returnObjects: true }); // Get tiers as an array
 
   return (
-    <div className="bg-white py-[80px] px-[20px]">
+    <section className="bg-white py-[80px] px-[20px]">
       <div className="mx-auto max-w-[1200px]">
         <div className="text-center">
           <h2 className="text-[40px] text-black_100 leading-[42.8px] font-[700] tracking-[-2%]">
