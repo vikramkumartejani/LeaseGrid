@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../assets/lease-grid-logo.svg";
 import Menu from "../assets/menu.svg";
 import CloseIcon from "../assets/close-menu.svg";
+import LanguageDropdown from "./LanguageDropdown";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,6 +45,9 @@ const Header = () => {
             >
               FAQ
             </a>
+          </li>
+          <li>
+            <LanguageDropdown />
           </li>
         </ul>
         <button className="border border-blueberry_blue text-base text-blueberry_blue font-bold px-5 h-[46px] rounded-[150px]">
@@ -99,6 +103,9 @@ const Header = () => {
               >
                 FAQ
               </a>
+            </li>
+            <li>
+              <LanguageDropdown />
             </li>
             <li>
               <button className="border border-blueberry_blue text-base text-blueberry_blue font-bold px-5 h-[46px] rounded-[150px]">

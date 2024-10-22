@@ -1,18 +1,21 @@
 import React from "react";
 import { MdOutlineStar } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const Testimonials = () => {
+  const { t } = useTranslation();
+
+  const testimonials = t("testimonials.list", { returnObjects: true }); // Get testimonials as an array
+
   return (
     <div className="bg-white py-[80px] px-[20px]">
       <div className="mx-auto max-w-[1280px]">
         <div className="text-center">
           <h2 className="text-[40px] text-black_100 leading-[42.8px] font-[700] tracking-[-2%]">
-            Testimonials
+            {t("testimonials.title")}
           </h2>
           <p className="mt-[20px] text-[16px] leading-[24px] text-gray_600 max-w-[632px] mx-auto">
-            Lorem ipsum dolor sit amet consectetur. Eget maecenas bibendum nisi
-            arcu vitae cum cras aenean. Risus diam lectus platea elit lectus
-            quisque
+            {t("testimonials.description")}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] mt-[60px] max-w-[1120px] mx-auto">
@@ -57,27 +60,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
-const testimonials = [
-  {
-    name: "Ronald Richards",
-    location: "United States",
-    image: "/profile-1.png",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
-    rating: 5,
-  },
-  {
-    name: "Annette Black",
-    location: "United States",
-    image: "/profile-2.png",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
-    rating: 5,
-  },
-  {
-    name: "Esther Howard",
-    location: "United States",
-    image: "/profile-3.png",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.",
-    rating: 5,
-  },
-];

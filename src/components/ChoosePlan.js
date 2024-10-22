@@ -1,19 +1,21 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const ChoosePlan = () => {
+  const { t } = useTranslation();
   const [activePlan, setActivePlan] = useState(1); // Set initial active plan to the second item (index 1)
+
+  const tiers = t("choosePlan.tiers", { returnObjects: true }); // Get tiers as an array
 
   return (
     <div className="bg-white py-[80px] px-[20px]">
       <div className="mx-auto max-w-[1280px]">
         <div className="text-center">
           <h2 className="text-[40px] text-black_100 leading-[42.8px] font-[700] tracking-[-2%]">
-            Choose Your Plan
+            {t("choosePlan.title")}
           </h2>
           <p className="mt-[20px] text-[16px] leading-[24px] text-gray_600 max-w-[632px] mx-auto">
-            Lorem ipsum dolor sit amet consectetur. Eget maecenas bibendum nisi
-            arcu vitae cum cras aenean. Risus diam lectus platea elit lectus
-            quisque
+            {t("choosePlan.description")}
           </p>
         </div>
         <div className="flex flex-col md:flex-row flex-wrap justify-center md:items-stretch items-center gap-[20px] mt-[60px]">
@@ -68,39 +70,3 @@ const ChoosePlan = () => {
 };
 
 export default ChoosePlan;
-
-const tiers = [
-  {
-    title: "Starter",
-    price: "14.90$",
-    features: [
-      "Lorem ipsum dolor sit amet consectetur. Sit congue tincidunt",
-      "Feature label goes here",
-      "et consectetur. Sit congue tincidunt",
-      "Feature label goes here",
-    ],
-    ctaText: "Start Free Trial",
-  },
-  {
-    title: "Pro",
-    price: "14.90$",
-    features: [
-      "Lorem ipsum dolor sit amet consectetur. Sit congue tincidunt",
-      "Feature label goes here",
-      "et consectetur. Sit congue tincidunt",
-      "Feature label goes here",
-    ],
-    ctaText: "Get Started",
-  },
-  {
-    title: "Enterprise",
-    price: "14.90$",
-    features: [
-      "Lorem ipsum dolor sit amet consectetur. Sit congue tincidunt",
-      "Feature label goes here",
-      "et consectetur. Sit congue tincidunt",
-      "Feature label goes here",
-    ],
-    ctaText: "Contact Sales",
-  },
-];

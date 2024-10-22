@@ -1,31 +1,17 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import ArrowUp from "../assets/arrow-up.svg";
 import ArrowDown from "../assets/arrow-down.svg";
 
 const FrequentlyAskedQuestion = () => {
+  const { t } = useTranslation();
   const [openFAQ, setOpenFAQ] = useState(0);
 
   const toggleFAQ = (index) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
-  const faqs = [
-    {
-      question: "What is LeaseGrid?",
-      answer:
-        "LeaseGrid is a comprehensive property management software designed to streamline and simplify the management of residential and commercial properties. It offers a range of features, including lease and tenant management, accounting, online rent payments, maintenance tracking, and more—all in one easy-to-use platform.",
-    },
-    {
-      question: "Who can use LeaseGrid?",
-      answer:
-        "LeaseGrid is a comprehensive property management software designed to streamline and simplify the management of residential and commercial properties. It offers a range of features, including lease and tenant management, accounting, online rent payments, maintenance tracking, and more—all in one easy-to-use platform.",
-    },
-    {
-      question: "Can I use LeaseGrid to manage multiple properties?",
-      answer:
-        "LeaseGrid is a comprehensive property management software designed to streamline and simplify the management of residential and commercial properties. It offers a range of features, including lease and tenant management, accounting, online rent payments, maintenance tracking, and more—all in one easy-to-use platform.",
-    },
-  ];
+  const faqs = t("faq.questions", { returnObjects: true }); // Get questions as an array
 
   return (
     <div
@@ -34,12 +20,10 @@ const FrequentlyAskedQuestion = () => {
     >
       <div className="text-center">
         <h1 className="text-black_100 text-[40px] leading-[42px] tracking-[-2%] font-bold">
-          Frequently Asked Question
+          {t("faq.title")}
         </h1>
         <p className="text-gray_600 text-base leading-[24px] font-normal max-w-[632px] mx-auto mt-4">
-          Lorem ipsum dolor sit amet consectetur. Eget maecenas bibendum nisi
-          arcu vitae cum cras aenean. Risus diam lectus platea elit lectus
-          quisque
+          {t("faq.description")}
         </p>
       </div>
 

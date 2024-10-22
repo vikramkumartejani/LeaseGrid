@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ArrowIcon from "../assets/arrow-icon.svg";
 import HeroSection from "../assets/hero-section-img.svg";
 import ShapeOne from "../assets/Bottom-Shape-1.svg";
@@ -10,6 +11,8 @@ import ShapeSix from "../assets/Bottom-Shape-6.svg";
 import ShapeSeven from "../assets/Bottom-Shape-7.svg";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div
@@ -17,18 +20,19 @@ const Hero = () => {
         className="px-4 sm:px-7 md:px-14 xl:px-28 max-w-[1440px] w-full mx-auto mt-14"
       >
         <h1 className="max-w-[789px] mx-auto text-black_100 text-center text-[40px] sm:text-[60px] leading-[45px] sm:leading-[64px] tracking-[-0.02rem] font-bold">
-          Your All-in-One{" "}
-          <span className="text-blueberry_blue">Property Management</span>{" "}
+          {t("hero.title")}{" "}
+          <span className="text-blueberry_blue">
+            {t("hero.highlightedText")}
+          </span>{" "}
           Software
         </h1>
         <p className="mt-7 text-gray_600 text-base font-medium leading-[24px] max-w-[592px] mx-auto text-center">
-          LeaseGrid is here to streamline the process and make your property
-          management experience effortless, efficient, and organized.
+          {t("hero.description")}
         </p>
 
         <div className="mt-7 flex items-center justify-center">
           <button className="py-2 pr-2 bg-blueberry_blue rounded-[60px] text-white text-2xl font-bold leading-[30px] w-[250px] flex items-center justify-end gap-2.5">
-            Get Started
+            {t("hero.buttonText")}
             <img src={ArrowIcon} alt="arrow-icon" />
           </button>
         </div>
@@ -41,7 +45,6 @@ const Hero = () => {
         />
       </div>
 
-      {/*  */}
       <section className="overflow-hidden mt-5 sm:mt-10 w-full border-b border-black_100 border-opacity-40 opacity-40">
         <div className="flex items-end w-full justify-center gap-1 sm:gap-2 md:gap-[35.43px]">
           <img src={ShapeOne} alt="ShapeOne" loading="lazy" />
