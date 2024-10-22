@@ -18,10 +18,11 @@ const LanguageDropdown = () => {
       : languages[0];
   });
 
+  // Function to change language and update the state with the correct flag
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     const selectedLang = languages.find((lang) => lang.code === lng);
-    setCurrentLang(selectedLang);
+    setCurrentLang(selectedLang); // Update the flag (image)
     localStorage.setItem("selectedLanguage", lng);
     setIsOpen(false);
 
@@ -29,6 +30,36 @@ const LanguageDropdown = () => {
     const newPath = lng === "en" ? "/en" : "/de";
     window.history.pushState({}, "", newPath);
   };
+
+  // Handle URL-based language changes
+  const updateLanguageFromURL = () => {
+    const pathLang = window.location.pathname.split("/")[1]; // Get language from URL (e.g., /en or /de)
+    const languageCode = pathLang === "de" ? "de" : "en"; // Default to "en" if not "de"
+
+    if (languageCode !== i18n.language) {
+      // Update i18n language
+      changeLanguage(languageCode);
+    } else {
+      // Ensure the currentLang (flag) updates even if i18n.language is already correct
+      const selectedLang = languages.find((lang) => lang.code === languageCode);
+      setCurrentLang(selectedLang);
+    }
+  };
+
+  useEffect(() => {
+    // Update language and flag based on the current URL on component mount
+    updateLanguageFromURL();
+
+    const handlePopState = () => {
+      updateLanguageFromURL(); // Handle back/forward navigation
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
