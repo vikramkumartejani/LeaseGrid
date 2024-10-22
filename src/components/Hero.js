@@ -26,7 +26,8 @@ const Hero = () => {
       </div>
 
       {/*  */}
-      <section className='overflow-hidden mt-5 sm:mt-10 max-w-[1440px] w-full mx-auto flex items-end justify-center gap-1 sm:gap-2 md:gap-[35.43px] border-b border-black_100 border-opacity-40 opacity-40'>
+      <section className='overflow-hidden mt-5 sm:mt-10 w-full border-b border-black_100 border-opacity-40 opacity-40'>
+        <div className='flex items-end w-full justify-center gap-1 sm:gap-2 md:gap-[35.43px]'>
           <img src={ShapeOne} alt='ShapeOne' loading='lazy' />
           <img src={ShapeTwo} alt='ShapeTwo' loading='lazy' className='max-w-[72.52px] md:max-w-full'/>
           <img src={ShapeThree} alt='ShapeThree' loading='lazy' className='max-w-[23.52px] md:max-w-full'/>
@@ -35,6 +36,7 @@ const Hero = () => {
           <img src={ShapeSix} alt='ShapeSix' loading='lazy' className='max-w-[54.52px] md:max-w-full'/>
           <img src={ShapeSeven} alt='ShapeSeven'loading='lazy' className='max-w-[72.52px] md:max-w-full' />
           <img src={ShapeTwo} alt='ShapeEight' loading='lazy' className='max-w-[72.52px] md:max-w-full'/>
+        </div>
       </section>
     </>
   )
