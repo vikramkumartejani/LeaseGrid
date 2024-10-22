@@ -14,7 +14,7 @@ const FrequentlyAskedQuestion = () => {
   const faqs = t("faq.questions", { returnObjects: true }); // Get questions as an array
 
   return (
-    <div
+    <section
       id="faq"
       className="px-4 sm:px-7 md:px-14 xl:px-28 bg-[#F9FAFB] w-full pt-20 pb-28"
     >
@@ -56,7 +56,7 @@ const FrequentlyAskedQuestion = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

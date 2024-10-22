@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <div
+    <footer
       className="py-20"
       style={{
         background: " linear-gradient(270deg, #9233EA 0%, #5145E5 100%)",
@@ -175,7 +175,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
