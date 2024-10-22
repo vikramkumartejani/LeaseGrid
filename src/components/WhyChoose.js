@@ -7,7 +7,7 @@ export default function WhyChoose() {
 
   return (
     <div id="whychooseus" className="px-[20px] py-[80px]">
-      <div className="max-w-[1280px] mx-auto">
+      <div className="max-w-[1180px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[28px]">
           <div className="flex flex-col gap-[59px]">
             <h2 className="text-[40px] leading-[44px] text-black_100 font-[700]">
