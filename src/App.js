@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import KeyFeatures from "./components/KeyFeatures";
 import Testimonials from "./components/Testimonials";
 import WhyChoose from "./components/WhyChoose";
+import FrequentlyAskedQuestion from "./components/FrequentlyAskedQuestion";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <KeyFeatures />
       <Testimonials />
       <WhyChoose />
+      <FrequentlyAskedQuestion />
       <Footer />
     </div>
   );
