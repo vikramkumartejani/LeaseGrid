@@ -31,39 +31,39 @@ const Footer = () => {
           <div className="w-full lg:w-fit flex sm:flex-row flex-col items-start justify-between gap-10 sm:gap-[60px] xl:gap-[100px]">
             <div>
               <h2 className="text-white text-sm leading-[19.5px] font-bold mb-[22px]">
-                CONTENT
+                {t("footer.content.title")}
               </h2>
               <ul className="flex gap-[22px] flex-col">
                 <li>
                   <a
-                    href="/"
+                    href="/#home"
                     className="text-white text-sm leading-[19.5px] font-medium"
                   >
-                    Home
+                    {t("footer.content.home")}
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="/#keyfeatures"
                     className="text-white text-sm leading-[19.5px] font-medium"
                   >
-                    Key Features
+                    {t("footer.content.keyFeatures")}
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="/#whychooseus"
                     className="text-white text-sm leading-[19.5px] font-medium"
                   >
-                    Why Choose Us?
+                    {t("footer.content.whyChooseUs")}
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/"
+                    href="/#faq"
                     className="text-white text-sm leading-[19.5px] font-medium"
                   >
-                    FAQ
+                    {t("footer.content.faq")}
                   </a>
                 </li>
                 <li>
@@ -71,14 +71,14 @@ const Footer = () => {
                     href="/"
                     className="text-white text-sm leading-[19.5px] font-bold"
                   >
-                    Contact Us
+                    {t("footer.content.contactUs")}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="text-white text-sm leading-[19.5px] font-bold mb-[22px]">
-                COMPANY
+                {t("footer.company.title")}
               </h2>
               <ul className="flex gap-[22px] flex-col">
                 <li>
@@ -86,7 +86,7 @@ const Footer = () => {
                     href="/"
                     className="text-white text-sm leading-[19.5px] font-medium"
                   >
-                    Privacy Policy
+                    {t("footer.company.privacyPolicy")}
                   </a>
                 </li>
                 <li>
@@ -94,7 +94,7 @@ const Footer = () => {
                     href="/"
                     className="text-white text-sm leading-[19.5px] font-medium"
                   >
-                    Terms & Conditions
+                    {t("footer.company.termsConditions")}
                   </a>
                 </li>
                 <li>
@@ -102,14 +102,14 @@ const Footer = () => {
                     href="/"
                     className="text-white text-sm leading-[19.5px] font-medium"
                   >
-                    Cookies Settings
+                    {t("footer.company.cookiesSettings")}
                   </a>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="text-white text-sm leading-[19.5px] font-bold mb-[22px]">
-                CONTACT
+                {t("footer.contact.title")}
               </h2>
               <ul className="flex gap-[22px] flex-col">
                 <li>
@@ -118,7 +118,7 @@ const Footer = () => {
                     className="text-white text-sm leading-[19.5px] font-medium flex items-start gap-2"
                   >
                     <img src={LocationIcon} alt="location" className="mt-1" />
-                    London W3 9NW, United <br /> Kingdom
+                    {t("footer.contact.location")}
                   </a>
                 </li>
                 <li>
@@ -126,13 +126,8 @@ const Footer = () => {
                     href="/"
                     className="text-white text-sm leading-[19.5px] font-medium flex items-start gap-2"
                   >
-                    <img
-                      src={PhoneIcon}
-                      alt="location"
-                      width={22}
-                      height={24}
-                    />
-                    0208 993 4500
+                    <img src={PhoneIcon} alt="phone" width={22} height={24} />
+                    {t("footer.contact.phone")}
                   </a>
                 </li>
                 <li>
@@ -142,12 +137,12 @@ const Footer = () => {
                   >
                     <img
                       src={EmailIcon}
-                      alt="location"
+                      alt="email"
                       width={20}
                       height={16}
                       className="mt-0.5"
                     />
-                    info@leasgrid.io
+                    {t("footer.contact.email")}
                   </a>
                 </li>
               </ul>
@@ -158,7 +153,7 @@ const Footer = () => {
         <div className="border-t border-[#9CA3AF] mt-8">
           <div className="mt-7 flex sm:items-center sm:flex-row flex-col justify-between w-full gap-8">
             <p className="text-white text-base leading-[24px] font-medium">
-              © 2024. All rights reserved.
+              {t("footer.footerText")}
             </p>
             <div className="flex items-center gap-5">
               <a href="">

@@ -1,4 +1,20 @@
 {
+  "header": {
+    "logo": {
+      "alt": "Logo"
+    },
+    "menu": {
+      "home": "Startseite",
+      "keyFeatures": "Hauptmerkmale",
+      "whyChooseUs": "Warum uns wählen?",
+      "faq": "FAQ",
+      "contactUs": "Kontaktieren Sie uns"
+    },
+    "mobileMenu": {
+      "open": "menü",
+      "close": "menü schließen"
+    }
+  },
   "hero": {
     "title": "Ihre All-in-One",
     "highlightedText": "Immobilienverwaltung",
@@ -177,6 +193,27 @@
     ]
   },
   "footer": {
-    "description": "LeaseGrid ist eine umfassende Software für das Immobilienmanagement, die entwickelt wurde, um die Verwaltung von Wohn- und Gewerbeimmobilien zu rationalisieren und zu vereinfachen."
+    "description": "LeaseGrid ist eine umfassende Software für das Immobilienmanagement, die entwickelt wurde, um die Verwaltung von Wohn- und Gewerbeimmobilien zu rationalisieren und zu vereinfachen.",
+    "content": {
+      "title": "INHALT",
+      "home": "Startseite",
+      "keyFeatures": "Hauptmerkmale",
+      "whyChooseUs": "Warum uns wählen?",
+      "faq": "FAQ",
+      "contactUs": "Kontaktieren Sie uns"
+    },
+    "company": {
+      "title": "UNTERNEHMEN",
+      "privacyPolicy": "Datenschutz-Bestimmungen",
+      "termsConditions": "Allgemeine Geschäftsbedingungen",
+      "cookiesSettings": "Cookie-Einstellungen"
+    },
+    "contact": {
+      "title": "KONTAKT",
+      "location": "London W3 9NW, Vereinigtes Königreich",
+      "phone": "0208 993 4500",
+      "email": "info@leasegrid.io"
+    },
+    "footerText": "© 2024. Alle Rechte vorbehalten."
   }
 }

@@ -1,15 +1,21 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next"; // Import i18next hook
 import Logo from "../assets/lease-grid-logo.svg";
 import Menu from "../assets/menu.svg";
 import CloseIcon from "../assets/close-menu.svg";
 import LanguageDropdown from "./LanguageDropdown";
 
 const Header = () => {
+  const { t } = useTranslation(); // Get the translation function
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="px-4 sm:px-7 md:px-14 xl:px-28 max-w-[1440px] w-full mx-auto py-5 sticky top-0 bg-white flex items-center justify-between z-[9999]">
-      <img src={Logo} alt="Logo" className="w-[225px] md:w-[265px]" />
+      <img
+        src={Logo}
+        alt={t("header.logo.alt")}
+        className="w-[225px] md:w-[265px]"
+      />
 
       {/* Desktop Menu */}
       <div className="lg:flex hidden items-center gap-6">
@@ -19,7 +25,7 @@ const Header = () => {
               href="/#home"
               className="text-black_100 font-medium leading-[19.5px]"
             >
-              Home
+              {t("header.menu.home")}
             </a>
           </li>
           <li>
@@ -27,7 +33,7 @@ const Header = () => {
               href="/#keyfeatures"
               className="text-black_100 font-medium leading-[19.5px]"
             >
-              Key Features
+              {t("header.menu.keyFeatures")}
             </a>
           </li>
           <li>
@@ -35,7 +41,7 @@ const Header = () => {
               href="/#whychooseus"
               className="text-black_100 font-medium leading-[19.5px]"
             >
-              Why Choose Us?
+              {t("header.menu.whyChooseUs")}
             </a>
           </li>
           <li>
@@ -43,7 +49,7 @@ const Header = () => {
               href="/#faq"
               className="text-black_100 font-medium leading-[19.5px]"
             >
-              FAQ
+              {t("header.menu.faq")}
             </a>
           </li>
           <li>
@@ -51,7 +57,7 @@ const Header = () => {
           </li>
         </ul>
         <button className="border border-blueberry_blue text-base text-blueberry_blue font-bold px-5 h-[46px] rounded-[150px]">
-          Contact Us
+          {t("header.menu.contactUs")}
         </button>
       </div>
 
@@ -62,7 +68,9 @@ const Header = () => {
       >
         <img
           src={menuOpen ? CloseIcon : Menu}
-          alt="menu"
+          alt={t(
+            menuOpen ? "header.mobileMenu.close" : "header.mobileMenu.open"
+          )}
           width={30}
           height={30}
         />
@@ -77,7 +85,7 @@ const Header = () => {
                 href="/#home"
                 className="text-black_100 font-medium leading-[19.5px]"
               >
-                Home
+                {t("header.menu.home")}
               </a>
             </li>
             <li>
@@ -85,7 +93,7 @@ const Header = () => {
                 href="/#keyfeatures"
                 className="text-black_100 font-medium leading-[19.5px]"
               >
-                Key Features
+                {t("header.menu.keyFeatures")}
               </a>
             </li>
             <li>
@@ -93,7 +101,7 @@ const Header = () => {
                 href="/#whychooseus"
                 className="text-black_100 font-medium leading-[19.5px]"
               >
-                Why Choose Us?
+                {t("header.menu.whyChooseUs")}
               </a>
             </li>
             <li>
@@ -101,7 +109,7 @@ const Header = () => {
                 href="/#faq"
                 className="text-black_100 font-medium leading-[19.5px]"
               >
-                FAQ
+                {t("header.menu.faq")}
               </a>
             </li>
             <li>
@@ -109,7 +117,7 @@ const Header = () => {
             </li>
             <li>
               <button className="border border-blueberry_blue text-base text-blueberry_blue font-bold px-5 h-[46px] rounded-[150px]">
-                Contact Us
+                {t("header.menu.contactUs")}
               </button>
             </li>
           </ul>
