@@ -14,7 +14,7 @@ const KeyFeatures = () => {
             quisque
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[84px] mt-[60px] max-w-[1120px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px] gap-y-[30px] md:gap-y-[84px] mt-[60px] max-w-[1120px] mx-auto">
           {features.map((feature) => (
             <div key={feature.title} className="flex flex-col items-center ">
               <img
