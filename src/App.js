@@ -6,6 +6,7 @@ import KeyFeatures from "./components/KeyFeatures";
 import Testimonials from "./components/Testimonials";
 import WhyChoose from "./components/WhyChoose";
 import FrequentlyAskedQuestion from "./components/FrequentlyAskedQuestion";
+import ChoosePlan from "./components/ChoosePlan";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <KeyFeatures />
       <Testimonials />
+      <ChoosePlan />
       <WhyChoose />
       <FrequentlyAskedQuestion />
       <Footer />
