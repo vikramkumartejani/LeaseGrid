@@ -22,7 +22,7 @@ const Hero = () => {
           </button>
         </div>
 
-        <img src={HeroSection} alt='hero-section' className='max-w-full mx-auto' />
+        <img src={HeroSection} alt='hero-section' className='max-w-full mx-auto' loading='lazy' />
       </div>
 
       {/*  */}
