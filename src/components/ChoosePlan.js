@@ -65,7 +65,7 @@ const ChoosePlan = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
