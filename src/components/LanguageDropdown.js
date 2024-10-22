@@ -9,9 +9,8 @@ const languages = [
 const LanguageDropdown = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null); // Reference for the dropdown
+  const dropdownRef = useRef(null);
 
-  // Initialize currentLang from localStorage or default to the first language
   const [currentLang, setCurrentLang] = useState(() => {
     const savedLang = localStorage.getItem("selectedLanguage");
     return savedLang
@@ -23,15 +22,18 @@ const LanguageDropdown = () => {
     i18n.changeLanguage(lng);
     const selectedLang = languages.find((lang) => lang.code === lng);
     setCurrentLang(selectedLang);
-    localStorage.setItem("selectedLanguage", lng); // Save the selected language in localStorage
-    setIsOpen(false); // Close the dropdown after selecting a language
+    localStorage.setItem("selectedLanguage", lng);
+    setIsOpen(false);
+
+    // Update URL without reloading
+    const newPath = lng === "en" ? "/en" : "/de";
+    window.history.pushState({}, "", newPath);
   };
 
-  // Handle click outside to close the dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false); // Close dropdown if click is outside
+        setIsOpen(false);
       }
     };
 
@@ -47,7 +49,7 @@ const LanguageDropdown = () => {
         <button
           type="button"
           className="inline-flex justify-between py-1 items-center w-full text-sm font-medium text-black"
-          onClick={() => setIsOpen(!isOpen)} // Toggle dropdown
+          onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-haspopup="true"
         >
@@ -72,12 +74,11 @@ const LanguageDropdown = () => {
         </button>
       </div>
 
-      {/* Dropdown menu */}
       {isOpen && (
         <div className="absolute right-0 z-10 mt-2 w-40 max-h-60 overflow-hidden rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
           <div
             className="py-1 overflow-y-auto"
-            style={{ maxHeight: "15rem" }} // Set max height for dropdown content
+            style={{ maxHeight: "15rem" }}
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="options-menu"
