@@ -2,7 +2,7 @@ import React from "react";
 
 const KeyFeatures = () => {
   return (
-    <div className="bg-white pt-[120px] pb-[80px] px-[20px]">
+    <div id="keyfeatures" className="bg-white pt-[120px] pb-[80px] px-[20px]">
       <div className="mx-auto max-w-[1280px]">
         <div className="text-center">
           <h2 className="text-[40px] text-black_100 leading-[42.8px] font-[700] tracking-[-2%]">

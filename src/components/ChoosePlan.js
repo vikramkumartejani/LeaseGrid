@@ -1,7 +1,8 @@
-import React from "react";
-import { GrFormCheckmark } from "react-icons/gr";
+import React, { useState } from "react";
 
 const ChoosePlan = () => {
+  const [activePlan, setActivePlan] = useState(1); // Set initial active plan to the second item (index 1)
+
   return (
     <div className="bg-white py-[80px] px-[20px]">
       <div className="mx-auto max-w-[1280px]">
@@ -19,8 +20,9 @@ const ChoosePlan = () => {
           {tiers.map((tier, index) => (
             <div
               key={index}
-              className={`bg-white px-[30px] py-[40px] rounded-[22px] ${
-                tier.highlighted
+              onClick={() => setActivePlan(index)} // Set the active plan when clicked
+              className={`bg-white px-[30px] py-[40px] rounded-[22px] cursor-pointer ${
+                activePlan === index
                   ? "border-[3px] border-[#4F45E4]"
                   : "border border-[#E5E7EB]"
               } w-full max-w-sm`}
@@ -50,7 +52,7 @@ const ChoosePlan = () => {
               </ul>
               <button
                 className={`w-full py-[12px] px-6 rounded-full text-[20px] font-[700] leading-[30px] ${
-                  tier.highlighted
+                  activePlan === index
                     ? "bg-[#4F45E4] text-white hover:bg-indigo-600"
                     : "bg-[#E4E7EB] text-black hover:bg-gray-200"
                 }`}
@@ -78,7 +80,6 @@ const tiers = [
       "Feature label goes here",
     ],
     ctaText: "Start Free Trial",
-    highlighted: false,
   },
   {
     title: "Pro",
@@ -90,7 +91,6 @@ const tiers = [
       "Feature label goes here",
     ],
     ctaText: "Get Started",
-    highlighted: true,
   },
   {
     title: "Enterprise",
@@ -102,6 +102,5 @@ const tiers = [
       "Feature label goes here",
     ],
     ctaText: "Contact Sales",
-    highlighted: false,
   },
 ];
